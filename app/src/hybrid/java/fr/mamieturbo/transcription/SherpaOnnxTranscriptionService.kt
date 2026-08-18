@@ -20,7 +20,7 @@ import java.util.concurrent.atomic.AtomicLong
 
 class SherpaOnnxTranscriptionService(context: Context) : RealtimeTranscriptionService {
     companion object {
-        private const val TAG = "MamieTurboLocal"
+        private const val TAG = "SpeechKioskLocal"
         private const val MODEL_DIR = "sherpa-onnx-streaming-zipformer-fr-2023-04-14"
         private const val INPUT_SAMPLE_RATE = 24_000
     }

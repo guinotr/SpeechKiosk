@@ -36,8 +36,6 @@ adb shell pm grant fr.mamieturbo android.permission.RECORD_AUDIO
 adb shell am start -n fr.mamieturbo/.ui.MainActivity
 ```
 
-The historical package name is retained so existing MamieTurbo tablets can be upgraded without provisioning Device Owner again.
-
 ## Privacy and security
 
 Audio and transcripts are not stored by the app. Cloud mode sends speech segments to OpenAI for transcription. The API key is stored in the app's private local preferences and is never compiled into the APK. For deployment to devices you do not control, use a backend and short-lived credentials instead of a permanent API key.

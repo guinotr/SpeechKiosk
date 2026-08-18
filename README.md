@@ -4,8 +4,6 @@
 
 SpeechKiosk transforme une tablette Android en écran de sous-titres en direct destiné notamment aux personnes sourdes ou malentendantes. L'interface volontairement minimale affiche la parole en gros caractères, blanc sur noir. En mode appareil dédié, la tablette ne sert plus qu'à la transcription et l'accès aux réglages reste protégé par un code administrateur.
 
-> Nom provisoire : **SpeechKiosk**. Le projet était auparavant appelé MamieTurbo.
-
 ## Fonctionnalités
 
 - transcription progressive à faible latence avec l'API Realtime OpenAI ;
@@ -76,8 +74,6 @@ adb shell am start -n fr.mamieturbo/.ui.MainActivity
 ```
 
 Une fois provisionnée, SpeechKiosk devient l'application d'accueil, entre automatiquement en Lock Task et masque les commandes permettant de quitter l'application. Pour la maintenance, faites un appui long sur la ligne d'état, saisissez le PIN, puis ouvrez le Wi-Fi ou les paramètres. Une réinitialisation de la tablette peut être nécessaire pour retirer un Device Owner.
-
-Le nom de paquet historique `fr.mamieturbo` est conservé pour permettre la mise à jour des tablettes existantes sans les reprovisionner.
 
 ## Confidentialité
 

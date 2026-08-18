@@ -18,7 +18,7 @@ class KioskManager(private val activity: Activity) {
     private val dpm = activity.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
     private val admin = ComponentName(activity, MamieTurboDeviceAdminReceiver::class.java)
 
-    /** Applies policies only after ADB provisioning made MamieTurbo Device Owner. */
+    /** Applies policies only after ADB provisioning made SpeechKiosk Device Owner. */
     fun provisionDedicatedDevice(): Boolean {
         if (!dpm.isDeviceOwnerApp(activity.packageName)) return false
         dpm.setLockTaskPackages(admin, arrayOf(activity.packageName))

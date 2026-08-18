@@ -7,7 +7,7 @@
         android:allowBackup="false"
         android:label="SpeechKiosk"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MamieTurbo">
+        android:theme="@style/Theme.SpeechKiosk">
         <receiver
             android:name=".kiosk.MamieTurboDeviceAdminReceiver"
             android:description="@string/device_admin_description"
