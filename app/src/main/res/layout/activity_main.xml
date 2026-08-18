@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#000000"
+    android:paddingStart="28dp" android:paddingTop="18dp" android:paddingEnd="28dp" android:paddingBottom="20dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:paddingBottom="12dp">
+        <View android:id="@+id/statusDot" android:layout_width="16dp" android:layout_height="16dp"
+            android:layout_marginEnd="12dp" android:background="@drawable/status_dot" />
+        <TextView android:id="@+id/statusText" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1" android:text="Connexion..."
+            android:textColor="#FFFFFF" android:textSize="22sp" />
+    </LinearLayout>
+    <ScrollView android:id="@+id/transcriptScroll" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <TextView android:id="@+id/transcriptText" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="SpeechKiosk est prêt."
+            android:textColor="#FFFFFF" android:textSize="46sp" android:lineSpacingMultiplier="1.12"
+            android:gravity="bottom|start" android:textIsSelectable="false" />
+    </ScrollView>
+</LinearLayout>

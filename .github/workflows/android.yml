@@ -1,0 +1,23 @@
+name: Android cloud build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+      - uses: android-actions/setup-android@v3
+      - run: chmod +x gradlew
+      - run: ./gradlew testCloudDebugUnitTest assembleCloudDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SpeechKiosk-cloud-debug
+          path: app/build/outputs/apk/cloud/debug/app-cloud-debug.apk
